@@ -125,7 +125,7 @@ function printHello() {
   // 2. Callback function using function expression
   // Callback function : 함수를 전달해서 상황에 맞는 함수를 호출하는 것
   function randomQuiz(answer, printYes, printNo) {
-    if (answer === 'love you') {
+    if (answer === 'Are you OK?') {
       printYes();
     } else {
       printNo();
