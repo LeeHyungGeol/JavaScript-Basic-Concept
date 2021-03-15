@@ -29,6 +29,14 @@ class UserStorage {
             }, 1000);
         });
     }
+
+    // Homework Answer 🚀
+  async getUserWithRole(user, password) {
+    const user = await this.loginUser(user, password);
+    const role = await this.getRoles(user);
+    return role;
+  }
+
 }
 
 const userStorage = new UserStorage();
@@ -39,4 +47,10 @@ userStorage
 .loginUser(id, password)
 .then(userStorage.getRole)
 .then(user=>alert(`Success, ${userWithRole.name} have a ${userWithRole.role} role`))
-.catch(console.log)
+.catch(console.log);
+
+// Homework Answer 🚀
+userStorage
+  .getUserWithRole(id, password) //
+  .catch(console.log)
+  .then(console.log);
